@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body>
+    <div class="container">
+    <div class="registration form">
+      <header>Signup</header>
+      <form id="form" method="post" action="/user/register" >
+        <input id="email" name="email" type="email" placeholder="Enter your email">
+        <input id="password" name="password" type="password" placeholder="Create a password">
+        <input id="conformPassword" name="conformpassword" type="password" placeholder="Confirm your password">
+        <button class="signupBtn" type="submit"  >Click</button>
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <a href="/login">Login</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{!-- form  validation --}}
+<script>
+
+document.querySelector('.signupBtn').addEventListener('click',(e)=>{
+  const email = document.querySelector('#email').value;
+  if(!email){
+    alert('enter email')
+    e.preventDefault();
+    return
+  }
+})
+</script>
+</body>
+</html>
